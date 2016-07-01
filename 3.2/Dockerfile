@@ -10,7 +10,7 @@ WORKDIR /redis/data
 
 EXPOSE 6379
 
-ENV REDIS_BRANCH unstable
+ENV REDIS_BRANCH 3.2
 ENV REDIS_DOWNLOAD_URL https://codeload.github.com/antirez/redis/tar.gz/"$REDIS_BRANCH"
 
 RUN set -x \
