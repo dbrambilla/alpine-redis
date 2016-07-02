@@ -29,5 +29,5 @@ docker run -it --rm --net host --name redis-cli  \
   --entrypoint redis-cli \
     "$IMAGE" -h 127.0.0.1 -p "$STARTING_PORT" \
       CLUSTER NODES
-      
+
 exit 0
