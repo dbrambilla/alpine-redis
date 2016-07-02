@@ -11,8 +11,13 @@ for ((port = STARTING_PORT + 1, endPort = STARTING_PORT + NUM_MASTERS; port < en
   MEET_NODE="$NAME_PREFIX$port"
   MEET_IP=$(docker service inspect -f '{{(index .Endpoint.VirtualIPs 1).Addr}}' "$MEET_NODE" | sed 's|/.*||')
   echo "CLUSTER MEET $MEET_IP $port"
-  docker exec -it "$LOCAL_CONTAINER_ID" redis-cli -h "$GREETER_NODE" -p "$STARTING_PORT" CLUSTER MEET "$MEET_IP" "$port"
+  
+  docker exec -it "$LOCAL_CONTAINER_ID" \
+    redis-cli -h "$GREETER_NODE" -p "$STARTING_PORT" \
+      CLUSTER MEET "$MEET_IP" "$port"
 done
 
-docker exec -it "$LOCAL_CONTAINER_ID" redis-cli -h "$GREETER_NODE" -p "$STARTING_PORT" CLUSTER NODES
+docker exec -it "$LOCAL_CONTAINER_ID" \
+  redis-cli -h "$GREETER_NODE" -p "$STARTING_PORT" \
+    CLUSTER NODES
 exit 0;
