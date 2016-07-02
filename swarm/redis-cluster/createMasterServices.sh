@@ -28,4 +28,5 @@ for ((port = STARTING_PORT, endPort = port + NUM_MASTERS; port < endPort; port++
         --appendfsync everysec \
         --auto-aof-rewrite-percentage 20
 done
-exit 0; 
+
+exit 0
