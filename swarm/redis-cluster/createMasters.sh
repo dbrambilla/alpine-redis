@@ -11,7 +11,7 @@ for ((port = STARTING_PORT, endPort = port + NUM_MASTERS; port < endPort; port++
   docker service create \
     --name "$NAME_PREFIX$port" \
     --network backend \
-    --publish "$port":"$port" \
+    --publish "$port:$port"/tcp \
     --reserve-cpu=1 \
     --reserve-memory 1000MB \
     --restart-condition any \
@@ -26,7 +26,7 @@ for ((port = STARTING_PORT, endPort = port + NUM_MASTERS; port < endPort; port++
         --port "$port" \
         --protected-mode no \
         --repl-diskless-sync yes \
-        --save \"\"
+        --save ''''
 done
 
 exit 0
