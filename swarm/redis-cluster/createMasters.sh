@@ -8,8 +8,9 @@ readonly NAME_PREFIX=${3:-"redis-cluster-m-"}
 readonly IMAGE=${4:-"jamespedwards42/alpine-redis:3.2"}
 
 for ((port = STARTING_PORT, endPort = port + NUM_MASTERS; port < endPort; port++)) do
+  name="$NAME_PREFIX$port"
   docker service create \
-    --name "$NAME_PREFIX$port" \
+    --name "$name" \
     --network backend \
     --publish "$port:$port"/tcp \
     --reserve-cpu=1 \
@@ -23,6 +24,7 @@ for ((port = STARTING_PORT, endPort = port + NUM_MASTERS; port < endPort; port++
         --cluster-enabled yes \
         --cluster-node-timeout 60000 \
         --cluster-require-full-coverage no \
+        --logfile "$name".log \
         --port "$port" \
         --protected-mode no \
         --repl-diskless-sync yes \
