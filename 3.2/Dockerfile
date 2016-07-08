@@ -8,8 +8,6 @@ VOLUME /redis/modules
 VOLUME /redis/data
 WORKDIR /redis/data
 
-EXPOSE 6379
-
 ENV REDIS_BRANCH 3.2.1
 ENV REDIS_DOWNLOAD_URL https://codeload.github.com/antirez/redis/tar.gz/"$REDIS_BRANCH"
 
