@@ -8,8 +8,7 @@ VOLUME /redis/modules
 VOLUME /redis/data
 WORKDIR /redis/data
 
-ENV REDIS_BRANCH unstable
-ENV REDIS_DOWNLOAD_URL https://codeload.github.com/antirez/redis/tar.gz/"$REDIS_BRANCH"
+ARG REDIS_BRANCH=unstable
 
 RUN set -x \
   && apk add --no-cache --virtual .build-deps \
@@ -19,7 +18,7 @@ RUN set -x \
     make \
     musl-dev \
     tar \
-  && curl -o redis.tar.gz "$REDIS_DOWNLOAD_URL" \
+  && curl -o redis.tar.gz https://codeload.github.com/antirez/redis/tar.gz/"$REDIS_BRANCH" \
   && mkdir -p /usr/src/redis \
   && tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1 \
   && rm redis.tar.gz \
@@ -28,5 +27,6 @@ RUN set -x \
   && rm -r /usr/src/redis \
   && apk del .build-deps
 
+USER redis
 ENTRYPOINT ["redis-server"]
 CMD ["--help"]
