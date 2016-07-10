@@ -2,8 +2,8 @@
 
 ## Supported Tags
 All images are FROM alpine:latest
-* [`3.2`](3.2/Dockerfile)
-* [`unstable`](unstable/Dockerfile)
+* [`3.2`](https://github.com/jamespedwards42/alpine-redis/blob/master/3.2/Dockerfile)
+* [`unstable`](https://github.com/jamespedwards42/alpine-redis/blob/master/unstable/Dockerfile)
 
 ## Docker Run
 ```shell
