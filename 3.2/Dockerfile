@@ -8,7 +8,7 @@ VOLUME /redis/modules
 VOLUME /redis/data
 WORKDIR /redis/data
 
-ARG REDIS_BRANCH=3.2.2
+ARG REDIS_BRANCH=3.2.3
 
 RUN set -x \
   && apk add --no-cache --virtual .build-deps \
