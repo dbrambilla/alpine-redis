@@ -1,4 +1,4 @@
-# [Alpine Redis Docker Images](https://hub.docker.com/r/jamespedwards42/alpine-redis/)
+# [Alpine Redis Docker Images](https://hub.docker.com/r/jamespedwards42/alpine-redis/) [![](https://images.microbadger.com/badges/image/jamespedwards42/alpine-redis.svg)](https://microbadger.com/images/jamespedwards42/alpine-redis "microbadger.com")
 
 ## Supported Tags
 All images are FROM alpine:latest
