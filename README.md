@@ -1,11 +1,12 @@
 # [Alpine Redis Docker Images](https://hub.docker.com/r/jamespedwards42/alpine-redis/) [![](https://images.microbadger.com/badges/image/jamespedwards42/alpine-redis.svg)](https://microbadger.com/images/jamespedwards42/alpine-redis "microbadger.com")
 
 ## Supported Tags
-All images are FROM alpine:latest
-* [`3.2`](https://github.com/jamespedwards42/alpine-redis/blob/master/3.2/Dockerfile)
-* [`unstable`](https://github.com/jamespedwards42/alpine-redis/blob/master/unstable/Dockerfile)
+
+* [`3.2`](https://github.com/jamespedwards42/alpine-redis/blob/master/3.2/Dockerfile) FROM alpine:latest
+* [`unstable`](https://github.com/jamespedwards42/alpine-redis/blob/master/unstable/Dockerfile) FROM alpine:edge
 
 ## Docker Run
+
 ```shell
 docker run -d \
   --name redis-6379 \
@@ -18,6 +19,7 @@ docker run -d \
 ```
 
 ## Docker Compose
+
 ```yaml
 version: '2'
 
