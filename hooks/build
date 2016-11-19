@@ -3,7 +3,7 @@
 BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 VCS_REF=$(git rev-parse --short HEAD)
 
-if [[ $DOCKER_TAG == *"latest" ]] ; then
+if [[ $DOCKER_TAG == *"_latest" ]] ; then
   REDIS_RELEASE="${DOCKER_TAG%_*}"
 else
   REDIS_RELEASE="$DOCKER_TAG"
