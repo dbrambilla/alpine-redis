@@ -1,4 +1,4 @@
-# [Redis Alpine Docker Images](https://hub.docker.com/r/comodal/alpine-redis/) [![](https://images.microbadger.com/badges/image/comodal/alpine-redis.svg)](https://microbadger.com/images/comodal/alpine-redis "microbadger.com") [![](https://images.microbadger.com/badges/commit/comodal/alpine-redis.svg)](https://microbadger.com/commit/comodal/alpine-redis "microbadger.com")
+# [Redis Alpine Docker Images](https://hub.docker.com/r/comodal/alpine-redis/) [![](https://images.microbadger.com/badges/image/comodal/alpine-redis.svg)](https://microbadger.com/images/comodal/alpine-redis "microbadger.com") [![](https://images.microbadger.com/badges/commit/comodal/alpine-redis.svg)](https://microbadger.com/images/comodal/alpine-redis "microbadger.com")
 
 ## Docker Run
 
