@@ -8,7 +8,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE\
       org.label-schema.version=$REDIS_RELEASE\
       org.label-schema.vcs-url="https://github.com/comodal/alpine-redis.git"\
       org.label-schema.vcs-ref=$VCS_REF\
-      org.label-schema.name="Redis Alpine Docker Image"\
+      org.label-schema.name="Redis Alpine Image"\
       org.label-schema.usage="https://github.com/comodal/alpine-redis#docker-run"\
       org.label-schema.schema-version="1.0.0-rc.1"
 
