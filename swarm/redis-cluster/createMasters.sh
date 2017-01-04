@@ -32,7 +32,7 @@ if [ -z "$ANNOUNCE_IP"]; then
             --protected-mode no \
             --repl-diskless-sync yes \
             --save '''' \
-            --cluster-announce-ip 35.163.183.43 \
+            --cluster-announce-ip $ANNOUNCE_IP \
             --cluster-announce-port $port \
             --cluster-announce-bus-port 1$port
     done
